@@ -1,4 +1,5 @@
 import React from "react";
+import Counter from "./Counter";
 import logo from "./logo.svg";
 import "./App.css";
 import { isMemberName } from "typescript";
@@ -9,9 +10,6 @@ interface AppProps {
 }
 
 const App: React.FunctionComponent<AppProps> = (props) => {
-  // const { message, contact } = props;
-  // const App = (props: AppProps) => {
-  console.log(props.isMessage);
   return (
     <div className="App">
       <header className="App-header">
@@ -25,6 +23,7 @@ const App: React.FunctionComponent<AppProps> = (props) => {
         >
           LET's Learn React
         </a>
+        <Counter></Counter>
       </header>
     </div>
   );
