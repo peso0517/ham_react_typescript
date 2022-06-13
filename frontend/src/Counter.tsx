@@ -15,6 +15,14 @@ const Counter: React.FC<{}> = () => {
   useEffect(() => {
     renderTimes.current = renderTimes.current + 1;
   });
+  // non null assertion operator -> null!
+  const ref = useRef<HTMLInputElement>(null!);
+  // const ref = useRef(null);
+
+  const focusInput = () => {
+    // nullの場合,focus実行しない
+    ref.current.focus();
+  };
 
   return (
     <div>
@@ -22,6 +30,8 @@ const Counter: React.FC<{}> = () => {
       <button onClick={plus}>+1</button>
       <button onClick={minus}>-1</button>
       <div>This components was re-rendered {renderTimes.current}</div>
+      <input ref={ref} type="text"></input>
+      <button onClick={focusInput}>Click Me!!</button>
     </div>
   );
 };
