@@ -1,5 +1,5 @@
 import React from "react";
-import Counter from "./Counter";
+import CounterWithReducer from "./CounterWithReducer";
 import logo from "./logo.svg";
 import "./App.css";
 import { isMemberName } from "typescript";
@@ -23,7 +23,7 @@ const App: React.FunctionComponent<AppProps> = (props) => {
         >
           LET's Learn React
         </a>
-        <Counter></Counter>
+        <CounterWithReducer />
       </header>
     </div>
   );
